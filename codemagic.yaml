@@ -16,7 +16,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - $CM_BUILD_USER_EMAIL
+          - sumitkumar43218765@gmail.com
         notify:
           success: true
           failure: false
