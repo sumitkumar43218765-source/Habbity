@@ -118,13 +118,13 @@ class DatabaseService {
   // ---------------------------------------------------------------------------
 
   /// Saves a single setting identified by [key].
-  Future<void> saveSetting(String key, dynamic value) async {
+  static Future<void> saveSetting(String key, dynamic value) async {
     await _settingsBox.put(key, value);
   }
 
   /// Retrieves a setting value for the given [key], cast to [T].
   /// Returns `null` if the key does not exist.
-  T? getSetting<T>(String key) {
+  static T? getSetting<T>(String key) {
     final dynamic value = _settingsBox.get(key);
     if (value is T) return value;
     return null;
@@ -132,10 +132,10 @@ class DatabaseService {
 
   /// Convenience getter: returns `true` if dark mode is enabled.
   /// Defaults to `true` when no preference has been saved.
-  bool get isDarkMode => getSetting<bool>('isDarkMode') ?? true;
+  static bool get isDarkMode => getSetting<bool>('isDarkMode') ?? true;
 
   /// Convenience setter for dark mode preference.
-  Future<void> setDarkMode(bool value) async {
+  static Future<void> setDarkMode(bool value) async {
     await saveSetting('isDarkMode', value);
   }
 }

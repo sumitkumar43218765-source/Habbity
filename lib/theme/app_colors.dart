@@ -39,6 +39,10 @@ abstract class AppColors {
   static const Color lightSurface = Color(0xFFFFFFFF);
   static const Color lightCard = Color(0xFFFFFFFF);
 
+  // ── Glassmorphism Colors ──────────────────────────────────────────────────
+  static const Color glassWhite = Color(0x1AFFFFFF);
+  static const Color glassBorder = Color(0x33FFFFFF);
+
   // ── Text Colors ───────────────────────────────────────────────────────────
   /// Primary text on dark backgrounds.
   static const Color textDark = Color(0xFFEEEEEE);
