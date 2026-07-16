@@ -1,0 +1,4 @@
+# Rename this file to local.properties and set the correct paths for your machine.
+# This file should NOT be committed to git (it already is in .gitignore).
+sdk.dir=/path/to/Android/sdk
+flutter.sdk=/path/to/flutter
