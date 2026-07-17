@@ -9,5 +9,8 @@ flutter config --enable-web
 echo "Getting dependencies..."
 flutter pub get
 
+echo "Generating app icons..."
+flutter pub run flutter_launcher_icons
+
 echo "Building Flutter Web App..."
 flutter build web --release

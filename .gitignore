@@ -40,3 +40,4 @@ unlinked_spec.ds
 
 # Web related
 lib/generated_plugin_registrant.dart
+.vercel
