@@ -19,4 +19,4 @@ workflows:
           - sumitkumar43218765@gmail.com
         notify:
           success: true
-          failure: false
+          failure: true
