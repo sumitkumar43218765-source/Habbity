@@ -17,7 +17,7 @@ class ThemeProvider extends ChangeNotifier {
   /// the theme setting. The initial value is read synchronously from Hive.
   ThemeProvider({DatabaseService? databaseService})
       : _db = databaseService ?? DatabaseService(),
-        _isDarkMode = (databaseService ?? DatabaseService()).isDarkMode;
+        _isDarkMode = DatabaseService.isDarkMode;
 
   /// Whether dark mode is currently active.
   bool get isDarkMode => _isDarkMode;
@@ -42,6 +42,6 @@ class ThemeProvider extends ChangeNotifier {
 
   /// Writes the current preference to persistent storage.
   void _persist() {
-    _db.setDarkMode(_isDarkMode);
+    DatabaseService.setDarkMode(_isDarkMode);
   }
 }
