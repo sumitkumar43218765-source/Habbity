@@ -11,6 +11,9 @@ abstract class AppColors {
   /// Pure White for dark mode
   static const Color primaryDark = Color(0xFFFFFFFF);
 
+  /// Legacy primary (mid-grey for fallback)
+  static const Color primary = Color(0xFF555555);
+
   /// Accent for subtle highlights (grey)
   static const Color accent = Color(0xFF888888);
 
@@ -43,6 +46,7 @@ abstract class AppColors {
   /// Subtle / secondary text.
   static const Color textSubtleDark = Color(0xFFAAAAAA);
   static const Color textSubtleLight = Color(0xFF666666);
+  static const Color textSubtle = Color(0xFF888888); // Legacy fallback
 
   // ── Habit Color Palette ───────────────────────────────────────────────────
   /// A curated palette users can choose from when creating or editing a habit.

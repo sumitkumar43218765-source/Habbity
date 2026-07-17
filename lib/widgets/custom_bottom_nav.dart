@@ -104,7 +104,7 @@ class _NavTab extends StatelessWidget {
             child: Icon(
               item.icon,
               size: 26,
-              color: isSelected ? AppColors.primary : AppColors.textSubtle,
+              color: isSelected ? Theme.of(context).colorScheme.primary : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.6),
             ),
           ),
           const SizedBox(height: 3),
@@ -118,7 +118,7 @@ class _NavTab extends StatelessWidget {
               child: Text(
                 item.label,
                 style: TextStyle(
-                  color: AppColors.primary,
+                  color: Theme.of(context).colorScheme.primary,
                   fontSize: 11,
                   fontWeight: FontWeight.w600,
                 ),
@@ -133,11 +133,11 @@ class _NavTab extends StatelessWidget {
             height: isSelected ? 5 : 0,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: AppColors.primary,
+              color: Theme.of(context).colorScheme.primary,
               boxShadow: isSelected
                   ? [
                       BoxShadow(
-                        color: AppColors.primary.withValues(alpha: 0.5),
+                        color: Theme.of(context).colorScheme.primary.withValues(alpha: 0.5),
                         blurRadius: 6,
                       ),
                     ]
